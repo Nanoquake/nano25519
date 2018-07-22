@@ -1,4 +1,4 @@
-# python-pure25519-blake
+# Nano25519
 
 This is a forked version of python-pure25519 from https://github.com/icarusglider/PyRai.
 
