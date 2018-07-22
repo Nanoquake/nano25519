@@ -4,6 +4,7 @@ from __future__ import print_function
 import sys, unittest
 from distutils.core import setup, Command
 
+
 class Test(Command):
     description = "run tests"
     user_options = []
