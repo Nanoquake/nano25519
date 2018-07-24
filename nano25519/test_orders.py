@@ -1,7 +1,7 @@
 import unittest
 from binascii import hexlify
-from pure25519.basic import Zero, ElementOfUnknownGroup
-from pure25519.basic import xform_affine_to_extended, L, bytes_to_unknown_group_element
+from .basic import Zero, ElementOfUnknownGroup
+from .basic import xform_affine_to_extended, L, bytes_to_unknown_group_element
 
 ORDERS = {1: "1", 2: "2", 4: "4", 8: "8",
           1*L: "1*L", 2*L: "2*L", 4*L: "4*L", 8*L: "8*L"}

@@ -1,7 +1,7 @@
 from __future__ import print_function
 import unittest
 from binascii import hexlify, unhexlify
-from pure25519.ed25519_oop import SigningKey, VerifyingKey
+from .ed25519_oop import SigningKey, VerifyingKey
 
 class KnownAnswerTests(unittest.TestCase):
     def test_all(self):

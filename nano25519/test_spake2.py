@@ -1,6 +1,6 @@
 import os, unittest
 from binascii import hexlify
-from pure25519.spake2 import start_U, finish_U, start_V, finish_V, U, V
+from .spake2 import start_U, finish_U, start_V, finish_V, U, V
 
 class SPAKE2(unittest.TestCase):
     def assertBytesEqual(self, e1, e2):

@@ -1,6 +1,6 @@
 from hashlib import sha256
 from pyblake2 import blake2b
-from pure25519.basic import (arbitrary_element, bytes_to_element, Base,
+from .basic import (arbitrary_element, bytes_to_element, Base,
                              random_scalar, password_to_scalar)
 
 # a,b random. X=G*a+U*pw. Y=G*b+V*pw. Z1=(Y-V*pw)*a. Z2=(X-U*pw)*b
@@ -46,4 +46,3 @@ def finish_V(start_data, X_s):
     transcript = idA + idB + X_s + Y_s + Z_s + pw
     key = blake2b(transcript).digest()
     return key
-

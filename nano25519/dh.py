@@ -1,4 +1,4 @@
-from pure25519.basic import random_scalar, Base, bytes_to_element
+from .basic import random_scalar, Base, bytes_to_element
 #from hashlib import sha256
 from pyblake2 import blake2b
 
