@@ -13,7 +13,7 @@ class Test(Command):
     def finalize_options(self):
         pass
     def run(self):
-        test = unittest.defaultTestLoader.discover("pure25519")
+        test = unittest.defaultTestLoader.discover("nano25519")
         runner = unittest.TextTestRunner(verbosity=2)
         result = runner.run(test)
         sys.exit(not result.wasSuccessful())
@@ -21,7 +21,7 @@ class Test(Command):
 class KnownAnswerTest(Test):
     description = "run known-answer-tests"
     def run(self):
-        test = unittest.defaultTestLoader.loadTestsFromName("pure25519.do_ed25519_kat")
+        test = unittest.defaultTestLoader.loadTestsFromName("nano25519.do_ed25519_kat")
         runner = unittest.TextTestRunner(verbosity=2)
         result = runner.run(test)
         sys.exit(not result.wasSuccessful())
@@ -42,7 +42,7 @@ setup(name="nano25519",
       author_email="warner-python-pure25519@lothar.com",
       license="MIT",
       url="https://github.com/warner/python-pure25519",
-      packages=["pure25519"],
+      packages=["nano25519"],
       package_dir={"nano25519": "nano25519"},
       cmdclass={"test": Test, "speed": Speed, "test_kat": KnownAnswerTest},
       )
