@@ -29,13 +29,13 @@ class KnownAnswerTest(Test):
 class Speed(Test):
     description = "run benchmark suite"
     def run(self):
-        from pure25519 import speed_basic, speed_ed25519, speed_dh, speed_spake2
+        from nano25519 import speed_basic, speed_ed25519, speed_dh, speed_spake2
         speed_basic.run()
         speed_ed25519.run()
         speed_dh.run()
         speed_spake2.run()
 
-setup(name="pure25519",
+setup(name="nano25519",
       version="0", # not for publication
       description="pure-python curve25519/ed25519 routines",
       author="Brian Warner",
@@ -43,6 +43,6 @@ setup(name="pure25519",
       license="MIT",
       url="https://github.com/warner/python-pure25519",
       packages=["pure25519"],
-      package_dir={"pure25519": "pure25519"},
+      package_dir={"nano25519": "nano25519"},
       cmdclass={"test": Test, "speed": Speed, "test_kat": KnownAnswerTest},
       )
